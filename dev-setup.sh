@@ -37,3 +37,10 @@ fi
 
 echo -e "\e[32m Installed Composer Successfully.\e[39m"
 echo ""
+
+echo -e "\e[32m Setting CLI shortcuts.\e[39m"
+echo "alias php='sudo /opt/lampp/bin/php'"  >> ".bashrc"
+echo "alias phpcs='sudo /opt/lampp/bin/phpcs'"  >> ".bashrc"
+echo "alias phpcpd='sudo /opt/lampp/bin/phpcpd'"  >> ".bashrc"
+
+
