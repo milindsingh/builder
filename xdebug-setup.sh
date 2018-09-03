@@ -2,8 +2,24 @@ GIT='0'
 IP=$(hostname -I| cut -d " " -f 1)
 
 echo "Xdebug installation started........."
+echo ""
+
+echo "Removing global php........."
+echo ""
+sudo apt purge php-*  
+
+echo "Installing dependencies........."
+echo ""
 sudo apt-get install -y autoconf
-sudo apt-get install -y git
+sudo apt install libc6-dev
+echo ""
+
+echo "Adding symlinks........"
+sudo ln -s /opt/lampp/bin/php /usr/bin/php
+sudo ln -s /opt/lampp/bin/phpcpd /usr/bin/phpcpd
+sudo ln -s /opt/lampp/bin/pecl /usr/bin/pecl
+sudo ln -s /opt/lampp/bin/phpize /usr/bin/phpize
+sudo ln -s /opt/lampp/bin/php-config /usr/bin/php-config
 
 if [ "$GIT" = "1" ];
 then
@@ -12,6 +28,7 @@ then
 
     if [ ! -d "./xdebug" ]; 
     then
+	sudo apt-get install -y git
 	git clone https://github.com/xdebug/xdebug.git
     fi
 
@@ -57,3 +74,8 @@ else
 fi
 
 echo "Xdebug installation completed........."
+echo ""
+
+echo "Restarting xampp........."
+sudo /opt/lampp/xampp restart
+
