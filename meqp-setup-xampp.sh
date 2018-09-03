@@ -1,3 +1,7 @@
+echo -e "\e[94m Installing Git......\e[39m"
+sudo apt install git
+echo ""
+
 echo -e "\e[94m PHP Code Sniffer Installing......\e[39m"
 printf "\n" | sudo /opt/lampp/bin/pear install --alldeps php_codesniffer
 echo ""
