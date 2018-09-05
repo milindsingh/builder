@@ -34,13 +34,14 @@ then
 
 	ln -s ${DIR}/jetbrains-toolbox.sh /usr/local/bin/jetbrains-toolbox
 	chmod -R +rwx /usr/local/bin/jetbrains-toolbox
+	chmod -R 777 /usr/local/bin/jetbrains-toolbox
 	echo ""
 	rm ${DEST}
 	echo -e "\e[32m Jetbrains Toolbox Installation Done.\e[39m"
 	echo ""
 fi
 
-echo -e "\e[95m Run 'sudo jetbrains-toolbox' to install PhpStorm.  \e[39m"
+echo -e "\e[95m Run 'jetbrains-toolbox' to install PhpStorm.  \e[39m"
 echo ""
 echo -e "\e[95m Then Open PhpStorm from the menu and setup MEQP.  \e[39m"
 echo ""
