@@ -1,9 +1,9 @@
 echo -e "\e[94m Installing Git......\e[39m"
-sudo apt install git
+sudo apt install -y git
 echo ""
 
 echo -e "\e[94m Installing Autoconf......\e[39m"
-sudo apt install autoconf
+sudo apt install -y autoconf
 echo ""
 
 echo -e "\e[94m PHP Code Sniffer Installing......\e[39m"
