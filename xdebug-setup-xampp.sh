@@ -4,14 +4,14 @@ IP=$(hostname -I| cut -d " " -f 1)
 echo "Xdebug installation started........."
 echo ""
 
-echo "Removing global php........."
+echo "Removing global PHP........."
 echo ""
-sudo apt purge php-*  
+sudo apt purge -y php-*  
 
 echo "Installing dependencies........."
 echo ""
 sudo apt-get install -y autoconf
-sudo apt install libc6-dev
+sudo apt install -y libc6-dev
 echo ""
 
 echo "Adding symlinks........"
