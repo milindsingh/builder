@@ -2,7 +2,7 @@
 
 #/etc/environment
 export PATH=$PATH:/opt/lampp/bin
-#USER=$(whoami)
+USER=$(whoami)
 
 ##http://ubuntuhandbook.org/index.php/2016/04/enable-ssh-ubuntu-16-04-lts/
 echo -e "\e[94m Installing SSH......\e[39m"
