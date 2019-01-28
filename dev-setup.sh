@@ -2,7 +2,7 @@
 
 #/etc/environment
 export PATH=$PATH:/opt/lampp/bin
-USER=$(whoami)
+#USER=$(whoami)
 
 ##http://ubuntuhandbook.org/index.php/2016/04/enable-ssh-ubuntu-16-04-lts/
 echo -e "\e[94m Installing SSH......\e[39m"
@@ -29,8 +29,8 @@ echo ""
 
 echo -e "\e[94m Installing Composer......\e[39m"
 
-DIRECTORY=$("/home/${USER}/.composer")
-if [-d !"$DIRECTORY"]; then
+DIRECTORY="/home/${USER}/.composer"
+if [ ! -d "$DIRECTORY" ]; then
     sudo chmod 777 -R "/home/$USER/.composer"
 fi
 
@@ -39,7 +39,7 @@ sudo curl -s https://getcomposer.org/installer | /opt/lampp/bin/php
 echo ""
 
 PHP_PATH="/usr/local/bin/php"
-if [-f !"$PHP_PATH"]; then
+if [ ! -f "$PHP_PATH" ]; then
 	sudo ln -s /opt/lampp/bin/php /usr/local/bin/php
 fi
 
