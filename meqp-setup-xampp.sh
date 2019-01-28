@@ -1,3 +1,6 @@
+echo -e "\e[94m Removing Global PHP......\e[39m"
+sudo apt purge -y php-*
+
 echo -e "\e[94m Installing Git......\e[39m"
 sudo apt install -y git
 echo ""
