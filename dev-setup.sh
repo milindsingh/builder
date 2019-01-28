@@ -38,6 +38,8 @@ echo ""
 sudo curl -s https://getcomposer.org/installer | /opt/lampp/bin/php
 echo ""
 
+cp ./composer.phar /usr/local/bin/composer
+
 PHP_PATH="/usr/local/bin/php"
 if [ ! -f "$PHP_PATH" ]; then
 	sudo ln -s /opt/lampp/bin/php /usr/local/bin/php
@@ -46,8 +48,10 @@ fi
 echo -e "\e[32m Installed Composer Successfully.\e[39m"
 echo ""
 
-echo -e "\e[32m Setting CLI shortcuts.\e[39m"
-echo "alias php='sudo /opt/lampp/bin/php'"  >> ".bashrc"
-echo "alias phpcs='sudo /opt/lampp/bin/phpcs'"  >> ".bashrc"
-echo "alias phpcpd='sudo /opt/lampp/bin/phpcpd'"  >> ".bashrc"
+echo "Adding symlinks........"
+sudo ln -s /opt/lampp/bin/php /usr/bin/php
+sudo ln -s /opt/lampp/bin/phpcpd /usr/bin/phpcpd
+sudo ln -s /opt/lampp/bin/pecl /usr/bin/pecl
+sudo ln -s /opt/lampp/bin/phpize /usr/bin/phpize
+sudo ln -s /opt/lampp/bin/php-config /usr/bin/php-config
 
