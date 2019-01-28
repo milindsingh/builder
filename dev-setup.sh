@@ -20,7 +20,7 @@ echo ""
 
 echo -e "\e[94m Installing Curl......\e[39m"
 echo ""
-sudo apt install curl -y
+sudo apt install curl -y --force-yes
 echo ""
 echo -e "\e[32m Installed Git Successfully.\e[39m"
 echo ""
