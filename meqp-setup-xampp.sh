@@ -20,7 +20,12 @@ if [ ${MODE}="COMPOSER" ]; then
 	COMPOSER_BIN="/home/${USER}/.composer/vendor/bin"
 	COMPOSER_CS_STANDARDS="/home/${USER}/.composer/vendor/squizlabs/php_codesniffer/src/Standards/"
         composer global require "squizlabs/php_codesniffer=*"
-	sudo echo "export PATH=$PATH:$COMPOSER_BIN" >> /home/${USER}/profile
+        sudo echo "if [ -d \"/home/${USER}/.composer/vendor/bin\" ] ; then
+        PATH=\"/home/${USER}/.composer/vendor/bin:\$PATH\"
+    	fi"  >> /home/${USER}/.profile
+   	 sudo echo "if [ -d \"/home/${USER}/.composer/vendor/bin\" ] ; then
+        PATH=\"/home/${USER}/.composer/vendor/bin:\$PATH\"
+    	fi"  >> /home/${USER}/.bashrc
 	echo ""
 	echo -e "\e[32m PHP Code Sniffer Installed Successfully.\e[39m"
 	echo ""
