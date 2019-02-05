@@ -6,20 +6,13 @@ echo ""
 
 echo "Removing global PHP........."
 echo ""
-sudo apt purge -y php-*  
+sudo apt purge -y php-* --force-yes
 
 echo "Installing dependencies........."
 echo ""
-sudo apt-get install -y autoconf
-sudo apt install -y libc6-dev
+sudo apt install -y autoconf --force-yes
+sudo apt install -y libc6-dev --force-yes
 echo ""
-
-echo "Adding symlinks........"
-sudo ln -s /opt/lampp/bin/php /usr/bin/php
-sudo ln -s /opt/lampp/bin/phpcpd /usr/bin/phpcpd
-sudo ln -s /opt/lampp/bin/pecl /usr/bin/pecl
-sudo ln -s /opt/lampp/bin/phpize /usr/bin/phpize
-sudo ln -s /opt/lampp/bin/php-config /usr/bin/php-config
 
 if [ "$GIT" = "1" ];
 then
@@ -70,7 +63,7 @@ xdebug.remote_connect_back=1
 	echo "Restarting xampp........."
 	sudo /opt/lampp/xampp restart
 else
-	echo "Xdebug.so not available.........."
+	echo "xdebug.so not available.........."
 fi
 
 echo "Xdebug installation completed........."

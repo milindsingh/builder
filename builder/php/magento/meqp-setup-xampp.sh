@@ -4,27 +4,27 @@ USER=$(whoami)
 MODE="COMPOSER"
 
 echo -e "\e[94m Removing Global PHP......\e[39m"
-sudo apt purge -y php-*
+sudo apt purge -y php-* --force-yes
 
 echo -e "\e[94m Installing Git......\e[39m"
-sudo apt install -y git
+sudo apt install -y git --force-yes
 echo ""
 
 echo -e "\e[94m Installing Autoconf......\e[39m"
-sudo apt install -y autoconf
+sudo apt install -y autoconf --force-yes
 echo ""
 
 # PHP 7.2 does not support pear install.
 if [ ${MODE}="COMPOSER" ]; then
-        echo -e "\e[94m PHP Code Sniffer Installing......\e[39m"
+    echo -e "\e[94m PHP Code Sniffer Installing......\e[39m"
 	COMPOSER_BIN="/home/${USER}/.composer/vendor/bin"
 	COMPOSER_CS_STANDARDS="/home/${USER}/.composer/vendor/squizlabs/php_codesniffer/src/Standards/"
-        composer global require "squizlabs/php_codesniffer=*"
-        sudo echo "if [ -d \"/home/${USER}/.composer/vendor/bin\" ] ; then
-        PATH=\"/home/${USER}/.composer/vendor/bin:\$PATH\"
+    composer global require "squizlabs/php_codesniffer=*"
+    sudo echo "if [ -d \"${COMPOSER_BIN}\" ] ; then
+        PATH=\"${COMPOSER_BIN}:\$PATH\"
     	fi"  >> /home/${USER}/.profile
-   	 sudo echo "if [ -d \"/home/${USER}/.composer/vendor/bin\" ] ; then
-        PATH=\"/home/${USER}/.composer/vendor/bin:\$PATH\"
+   	sudo echo "if [ -d \"${COMPOSER_BIN}\" ] ; then
+        PATH=\"${COMPOSER_BIN}:\$PATH\"
     	fi"  >> /home/${USER}/.bashrc
 	echo ""
 	echo -e "\e[32m PHP Code Sniffer Installed Successfully.\e[39m"
@@ -41,6 +41,8 @@ if [ ${MODE}="COMPOSER" ]; then
 	echo ""
 	echo -e "\e[32m MEQP Standards Installed Successfully.\e[39m"
 	echo ""
+    source /home/${USER}/.profile
+    source /home/${USER}/.bashrc
 
 elif [ ${MODE}="PEAR" ]; then
 	echo -e "\e[94m PHP Code Sniffer Installing......\e[39m"

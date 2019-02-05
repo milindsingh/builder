@@ -1,16 +1,16 @@
 
 echo -e "\e[94m PHP 5.6 Installing in OS......\e[39m"
 sudo add-apt-repository -y ppa:ondrej/php 
-sudo apt update -y -qq 
+sudo apt update -y -qq --force-yes
 
 echo ""
 echo -e "\e[94m Running system upgrades......\e[39m"
-sudo apt upgrade -y -qq 
+sudo apt upgrade -y -qq --force-yes
 echo -e "\e[32m System Upgrades Installed Successfully.\e[39m"
 echo ""
 
-sudo apt install -y php5.6 php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml
-sudo apt install -y php5-dev
+sudo apt install -y php5.6 php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml --force-yes
+sudo apt install -y php5-dev --force-yes
 echo ""
 echo -e "\e[32m PHP 5.6 Installed Successfully.\e[39m"
 echo ""
@@ -18,13 +18,13 @@ echo ""
 echo -e "\e[94m PHP 7.0 Installing in OS......\e[39m"
 echo ""
 
-sudo apt install -y php7.0 php7.0-mysql php7.0-mbstring php7.0-mcrypt php7.0-xml
+sudo apt install -y php7.0 php7.0-mysql php7.0-mbstring php7.0-mcrypt php7.0-xml --force-yes
 echo ""
 echo -e "\e[32m PHP 7.0 Installed Successfully.\e[39m"
 echo ""
 
 echo -e "\e[94m PHP Code Sniffer Installing......\e[39m"
-printf "\n" | sudo apt install -y php-pear
+printf "\n" | sudo apt install -y php-pear --force-yes
 printf "\n" | sudo pear install PHP_CodeSniffer
 echo ""
 echo -e "\e[32m PHP Code Sniffer Installed Successfully.\e[39m"
@@ -54,5 +54,5 @@ echo ""
 
 echo "To use Code Sniffer: "
 echo ""
-echo -e "\e[94mphpcs --report=xml --report-file=/opt/lampp/htdocs/jurn/mantagift/app/code/Ced/Advance/report.xml /opt/lampp/htdocs/jurn/mantagift/app/code/Ced/Advance --standard=MEQP2 --severity=10 -p\e[39m"
+echo -e "\e[94mphpcs --report=xml --report-file=/opt/lampp/htdocs/magento/app/code/Ced/Advance/report.xml /opt/lampp/htdocs/magento/app/code/Ced/Advance --standard=MEQP2 --severity=10 -p\e[39m"
 echo ""

@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
+USER=$(whoami)
 EXE_PATH=$PWD
-HOME_USER_PATH="/home/cedcoss"
+HOME_USER_PATH="/home/$USER"
+XAMPP_BIN="/opt/lampp/bin"
 
-XAMPP_NAME=xampp-linux-x64-7.0.27-0-installer.run
-XAMPP_URL=https://www.apachefriends.org/xampp-files/7.0.27/xampp-linux-x64-7.0.27-0-installer.run
+XAMPP_NAME=xampp-linux-x64-7.2.14-0-installer.run
+XAMPP_URL=https://www.apachefriends.org/xampp-files/7.2.14/xampp-linux-x64-7.2.14-0-installer.run
 XAMPP_PATH=/opt/lampp7
 
-XAMPP5_NAME=xampp-linux-x64-5.6.33-0-installer.run
-XAMPP5_URL=https://www.apachefriends.org/xampp-files/5.6.33/xampp-linux-x64-5.6.33-0-installer.run
+XAMPP5_NAME=xampp-linux-x64-5.6.40-0-installer.run
+XAMPP5_URL=https://www.apachefriends.org/xampp-files/5.6.40/xampp-linux-x64-5.6.40-0-installer.run
 XAMPP5_PATH=/opt/lampp5
 
 
@@ -96,6 +98,23 @@ fi
 cd ${EXE_PATH}
 
 echo "#!/bin/bash
+
+if [ ! -z \"$1\" -a \"$1\" != \" \" ] && [ -d \"/opt/lampp${1}\" ];
+ then
+        if [[ -f '/opt/lampp/xampp' && -L /opt/lampp/xampp'  ]]
+            then
+                    sudo /opt/lampp/xampp stop
+                    sudo rm /opt/lampp
+        fi
+
+        sudo ln -s /opt/lampp${1} /opt/lampp
+        echo
+        sudo /opt/lampp/xampp start
+        echo -e \"\e[32m XAMPP${1} started.\e[39m\"
+        exit
+fi;
+
+
 if [ -d '/opt/lampp' ]
 then
 	echo
@@ -106,14 +125,14 @@ fi
 echo
 echo \"Which XAMPP would you like to activate?\"
 echo
-echo \"1. 7 for XAMPP with PHP 7.0\"
+echo \"1. 7 for XAMPP with PHP 7.2\"
 echo
 echo \"2. 5 for XAMPP with PHP 5.6\"
 
 read version
 
 echo
-if [ -f '/opt/lampp/xampp' ]
+if [[ -f '/opt/lampp/xampp' && -L /opt/lampp/xampp'  ]]
 then
 	sudo /opt/lampp/xampp stop
 	sudo rm /opt/lampp
@@ -135,6 +154,16 @@ sudo chmod +x "/usr/bin/xampp.sh"
 cd ${HOME_USER_PATH}
 echo "alias xampp='/usr/bin/xampp.sh'"  >> ".bashrc"
 
+sudo echo "if [ -d \"${XAMPP_BIN}\" ] ; then
+        PATH=\"${XAMPP_BIN}:\$PATH\"
+    	fi"  >> /home/${USER}/.profile
+sudo echo "if [ -d \"${XAMPP_BIN}\" ] ; then
+        PATH=\"${XAMPP_BIN}:\$PATH\"
+    	fi"  >> /home/${USER}/.bashrc
+
+source /home/${USER}/.profile
+source /home/${USER}/.bashrc
+xampp 7
 
 echo ""
 echo -e "\e[32m Installed and Setup XAMPP in your system Successfully.\e[39m"

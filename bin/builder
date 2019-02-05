@@ -1,1 +1,10 @@
 #!/bin/sh
+
+../builder/initialize.sh
+../builder/php/installer/xampp.sh
+
+../builder/php/initialize.sh
+../builder/php/xdebug-setup-xampp.sh
+../builder/php/magento/meqp-setup-xampp.sh
+
+../builder/php/installer/ide.sh
