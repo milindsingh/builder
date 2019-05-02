@@ -17,8 +17,9 @@ echo ""
 sudo curl -s https://getcomposer.org/installer | php
 echo ""
 
-cp ./composer.phar /usr/local/bin/composer
+sudo cp ./composer.phar /usr/local/bin/composer
 
+sudo chmod 777 -R "/home/$USER/.composer"
 
 echo -e "\e[32m Installed Composer Successfully.\e[39m"
 echo ""
