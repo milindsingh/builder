@@ -7,8 +7,11 @@ echo -e "\e[94m Installing Composer......\e[39m"
 
 DIRECTORY="/home/${USER}/.composer"
 if [ ! -d "$DIRECTORY" ]; then
-    sudo chmod 777 -R "/home/$USER/.composer"
+    sudo mkdir "/home/$USER/.composer"
 fi
+
+sudo chmod 777 -R "/home/$USER/.composer"
+
 
 echo ""
 sudo curl -s https://getcomposer.org/installer | php
