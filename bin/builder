@@ -1,6 +1,14 @@
 #!/bin/bash
 
-../builder/initialize.sh
+echo    "System setup initiated"
+echo    # (optional) move to a new line
+
+read -p "Do you want to setup SSH|cURL|Git [Y|N]? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ../builder/initialize.sh
+fi
 
 read -p "Do you want to setup XAMPP [Y|N]? " -n 1 -r
 echo    # (optional) move to a new line
@@ -9,7 +17,12 @@ then
     ../builder/php/installer/xampp.sh
 fi
 
-../builder/php/initialize.sh
+read -p "Do you want to setup Composer [Y|N]? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ../builder/php/initialize.sh
+fi
 
 read -p "Do you want to setup Xdebug [Y|N]? " -n 1 -r
 echo    # (optional) move to a new line
@@ -32,5 +45,8 @@ then
     ../builder/php/installer/ide.sh
 fi
 
+echo    # (optional) move to a new line
+echo    "System setup complete"
+echo    # (optional) move to a new line
 
 
