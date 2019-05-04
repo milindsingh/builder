@@ -1,4 +1,12 @@
 GIT='0'
+
+read -p "Install Xdebug from Git Source [Y|N]? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    GIT='1'
+fi
+
 IP=$(hostname -I| cut -d " " -f 1)
 
 echo "Xdebug installation started........."
