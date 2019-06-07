@@ -1,0 +1,18 @@
+ dpkg-buildpackage -rfakeroot -us -uc -ui
+dpkg-buildpackage: info: source package builder
+dpkg-buildpackage: info: source version 0.0.1-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Milind Singh <milind7@live.com>
+ dpkg-source --before-build builder-0.0.1
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_clean
+ dpkg-source -b builder-0.0.1
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building builder using existing ./builder_0.0.1.orig.tar.xz
+dpkg-source: info: local changes detected, the modified files are:
+ builder-0.0.1/bin/builder
+dpkg-source: error: aborting due to unexpected upstream changes, see /tmp/builder_0.0.1-1.diff.6ccAPg
+dpkg-source: info: you can integrate the local changes with dpkg-source --commit
+dpkg-buildpackage: error: dpkg-source -b builder-0.0.1 subprocess returned exit status 2
