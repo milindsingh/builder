@@ -3,46 +3,54 @@
 echo    "System setup initiated"
 echo    # (optional) move to a new line
 
+USER=$(whoami)
+if [[ $USER = "root" ]]
+then
+    echo "Please use without root user or sudo. Exiting...."
+    exit 0
+fi
+
+
 read -p "Do you want to setup SSH|cURL|Git [Y|N]? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    ./builder/initialize.sh
+    ../initialize.sh
 fi
 
 read -p "Do you want to setup XAMPP [Y|N]? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    ./builder/php/installer/xampp.sh
+    ../php/installer/xampp.sh
 fi
 
 read -p "Do you want to setup Composer [Y|N]? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    ./builder/php/initialize.sh
+    ../php/initialize.sh
 fi
 
 read -p "Do you want to setup Xdebug [Y|N]? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    ./builder/php/xdebug-setup-xampp.sh
+    ../php/xdebug-setup-xampp.sh
 fi
 
 read -p "Do you want to setup MEQP [Y|N]? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    ./builder/php/magento/meqp-setup-xampp.sh
+    ../php/magento/meqp-setup-xampp.sh
 fi
 
 read -p "Do you want to setup IDE [Y|N]? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    ./builder/php/installer/ide.sh
+    ../php/installer/ide.sh
 fi
 
 echo    # (optional) move to a new line

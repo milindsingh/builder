@@ -1,2 +1,8 @@
 .idea
 .tmp
+builder-0.0.1/bin/marketplace-eqp
+builder-0.0.1/bin/magento-coding-standard
+builder-0.0.1/bin/MEQP
+builder-0.0.1/bin/MEQP1
+builder-0.0.1/bin/xdebug
+builder-0.0.1/bin/composer.phar

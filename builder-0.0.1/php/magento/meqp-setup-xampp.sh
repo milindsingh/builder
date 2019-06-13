@@ -34,9 +34,12 @@ if [ ${MODE}="COMPOSER" ]; then
 	sudo rm -rf ./marketplace-eqp
 	git clone https://github.com/magento/marketplace-eqp.git
 	sudo cp -R marketplace-eqp/MEQP1 ${COMPOSER_CS_STANDARDS}MEQP1
-	sudo cp -R marketplace-eqp/MEQP2 ${COMPOSER_CS_STANDARDS}MEQP2
 	sudo cp -R marketplace-eqp/MEQP ${COMPOSER_CS_STANDARDS}MEQP
 	sudo sed -i "18irequire_once('${COMPOSER_CS_STANDARDS}MEQP/Utils/Helper.php');" "/home/${USER}/.composer/vendor/squizlabs/php_codesniffer/autoload.php"
+
+	sudo rm -rf ./magento-coding-standard
+	git clone https://github.com/magento/magento-coding-standard.git
+	sudo cp -R magento-coding-standard/Magento2 ${COMPOSER_CS_STANDARDS}Magento2
 
 	echo ""
 	echo -e "\e[32m MEQP Standards Installed Successfully.\e[39m"
@@ -51,14 +54,17 @@ elif [ ${MODE}="PEAR" ]; then
 	echo -e "\e[32m PHP Code Sniffer Installed Successfully.\e[39m"
 	echo ""
 
-	echo -e "\e[94m MEQP Standards Installing......\e[39m"
-	sudo rm -rf ./marketplace-eqp
-	git clone https://github.com/magento/marketplace-eqp.git
-	sudo cp -R marketplace-eqp/MEQP1 /opt/lampp/lib/php/PHP/CodeSniffer/src/Standards/MEQP1
-	sudo cp -R marketplace-eqp/MEQP2 /opt/lampp/lib/php/PHP/CodeSniffer/src/Standards/MEQP2
-	sudo cp -R marketplace-eqp/MEQP /opt/lampp/lib/php/PHP/CodeSniffer/src/Standards/MEQP
+	echo -e "\e[94m MEQP Standards Installing......\e[39m".
 
-	sudo sed -i "18irequire_once('/opt/lampp/lib/php/PHP/CodeSniffer/src/Standards/MEQP/Utils/Helper.php');" '/opt/lampp/lib/php/PHP/CodeSniffer/autoload.php'
+    sudo rm -rf ./marketplace-eqp
+    git clone https://github.com/magento/marketplace-eqp.git
+    sudo cp -R marketplace-eqp/MEQP1 ${COMPOSER_CS_STANDARDS}MEQP1
+    sudo cp -R marketplace-eqp/MEQP ${COMPOSER_CS_STANDARDS}MEQP
+    sudo sed -i "18irequire_once('${COMPOSER_CS_STANDARDS}MEQP/Utils/Helper.php');" "/home/${USER}/.composer/vendor/squizlabs/php_codesniffer/autoload.php"
+
+    sudo rm -rf ./magento-coding-standard
+    git clone https://github.com/magento/magento-coding-standard.git
+    sudo cp -R magento-coding-standard/Magento2 ${COMPOSER_CS_STANDARDS}Magento2
 
 	echo ""
 	echo -e "\e[32m MEQP Standards Installed Successfully.\e[39m"
