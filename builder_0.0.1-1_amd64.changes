@@ -1,5 +1,5 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
+Hash: SHA256
 
 Format: 1.8
 Date: Fri, 07 Jun 2019 11:29:17 +0530
@@ -12,32 +12,32 @@ Urgency: medium
 Maintainer: Milind Singh <milind7@live.com>
 Changed-By: Milind Singh <milind7@live.com>
 Description:
- builder    - <insert up to 60 chars description>
+ builder    - System setup scripts
 Changes:
  builder (0.0.1-1) unstable; urgency=medium
  .
    * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
 Checksums-Sha1:
- 6d50c737e575de2d5b1872093c2833add83b6a41 2580 builder_0.0.1-1_all.deb
- cdae913870ef851110a3a8050cc70a2de74c89d3 5909 builder_0.0.1-1_amd64.buildinfo
+ 2482ff9bd12a7906ede68d29cd725e816bc6b7e6 7072 builder_0.0.1-1_all.deb
+ 8031e930b2e556589bbdb08666b0fc8cb060c73c 5909 builder_0.0.1-1_amd64.buildinfo
 Checksums-Sha256:
- d69815d6e58cff4345dc2c8a1249d2f114a8e6952903e353dce8ccb99d82a93c 2580 builder_0.0.1-1_all.deb
- 5a25ae13a8416e83a8eb8388fef1191e4124ed4995ba5b8a543820fded8ffe19 5909 builder_0.0.1-1_amd64.buildinfo
+ 5edbea70de953b0f42f4dff888432db73b2f5247f0f6ca691a588bbc266e872a 7072 builder_0.0.1-1_all.deb
+ 122b380a92311428a4b586ba8b1d19fa10091a9e225b76e011668ed4066777de 5909 builder_0.0.1-1_amd64.buildinfo
 Files:
- 3631ed6c77512c46137092dee27e8591 2580 unknown optional builder_0.0.1-1_all.deb
- 949bbb2be939e5d0c324e05e3dfa08d7 5909 unknown optional builder_0.0.1-1_amd64.buildinfo
+ 4daa17fc335eb8a31e1fc2456f5436b9 7072 unknown optional builder_0.0.1-1_all.deb
+ b776fbf3c674e7aedb11ae27a7f23102 5909 unknown optional builder_0.0.1-1_amd64.buildinfo
 
 -----BEGIN PGP SIGNATURE-----
 
-iQHFBAEBCgAvFiEE2KEIur0YsdTKfpA2LprV5jB5Z/sFAlz6A+cRHG1pbGluZDdA
-bGl2ZS5jb20ACgkQLprV5jB5Z/vgygv+OU6Jh3VwhEL2n5wBByb9agNM//aPk3+W
-oi3VIhG6vsIfixkpJcvWYh7UpoV3XaViUNvDP4Vge4blzCx3MHwUQ3s7ZcFRVdCg
-tXNeD5Z/wN9afKO/Eetf7paoFwCHpIKmGYXUEb/AXvOqt0E7Oljjn5CZqsZMCAzz
-qGSD/Wkj4wxhQTIDgMxNZ1LSjAqA1sANJdypBCKflIJ3xbvXMaVD/Ubz4PVDkl5N
-C5PkD6YWON4k3VJlp0PlEzZcZuDVL664iKk9yblM9fBZqReAxJihk84YFbfnYEqd
-jCIdkRXA8jtI21nmdNHqR5CdWJf2vTOtvHoGU/5AduTNZULLwMYslv8rAyy6G1KB
-ybhkIKSVhiv/7Dv7u4w6ec06fCNOWMvA3TBCE2tmCjVcwAdt7WDBvOfGDyE1yZSW
-IWr554hE1u1uofVnFrq2NJKyAGBbqZuTYrUGE/yxwSsipvz/2qGorgTvIEJW21dB
-+QmMHDGiee7b4JxQgZHwWEav8c6fz7RL
-=68qo
+iQHEBAEBCAAvFiEE2KEIur0YsdTKfpA2LprV5jB5Z/sFAl0JyCARHG1pbGluZDdA
+bGl2ZS5jb20ACgkQLprV5jB5Z/vrpAv2OqlfyL4inGFcj8WeDWSMGu8WelftyBkq
+2r6bTehfSxBG5U2VO15IrPZ3ymRil6KTZqzn24rkM/mluwSBYGtZqfJJZfhamlPi
+GFc4sImpo6fMxcKFsa7HmpkNuuXaiJEXNZJwoWG/g7DF9vXjkCg79zrL7/4+94BA
+2QUJ8XVltMAebPx7UG8kvU6joywIyI6oQvPH9/99WAarP2AnTZ8lipUE4JTh9B31
+mLXfnogVuvLpoPzZWWgpm/E3gekR1VTbl4GfMWPUJC0qaGlHoezH4K6ZKqzvJgAr
+JR9CP4YpPyIWIWngS8kXckXenZuifw1j2156dAy9nkRVCJ2P0x2GMG418iUyNcoI
+isW7oC7O2/Dj143yqG+M+oIczrPrsv05XWbgLGHbqDJAP/1dl2pMRv8z+Iebgv21
+aFQ+XrFLRUPMCcz9PJXZn9XHf9CLalaMlb3fkrlmCt/bZ8lGGjkTQYS2mnQOeSRF
+2LMiYedxAkyvSNgaX2WuzXw086BH5bg=
+=n9Es
 -----END PGP SIGNATURE-----

@@ -4,12 +4,12 @@ Priority: optional
 Maintainer: Milind Singh <milind7@live.com>
 Build-Depends: debhelper (>= 10)
 Standards-Version: 4.1.2
-Homepage: <insert the upstream URL, if relevant>
+Homepage: https://github.com/milindsingh/builder
 #Vcs-Git: https://anonscm.debian.org/git/collab-maint/builder.git
 #Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/builder.git
 
 Package: builder
 Architecture: all
 Depends: ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: System setup scripts
+ Simple shell scripts for developer system setup via cli

@@ -1,2 +1,2 @@
 bin/builder usr/bin
- 
+builder/* opt/builder

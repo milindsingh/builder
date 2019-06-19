@@ -1,5 +1,5 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
+Hash: SHA256
 
 Format: 1.0
 Source: builder
@@ -7,14 +7,14 @@ Binary: builder
 Architecture: all
 Version: 0.0.1-1
 Checksums-Md5:
- 3631ed6c77512c46137092dee27e8591 2580 builder_0.0.1-1_all.deb
+ 4daa17fc335eb8a31e1fc2456f5436b9 7072 builder_0.0.1-1_all.deb
 Checksums-Sha1:
- 6d50c737e575de2d5b1872093c2833add83b6a41 2580 builder_0.0.1-1_all.deb
+ 2482ff9bd12a7906ede68d29cd725e816bc6b7e6 7072 builder_0.0.1-1_all.deb
 Checksums-Sha256:
- d69815d6e58cff4345dc2c8a1249d2f114a8e6952903e353dce8ccb99d82a93c 2580 builder_0.0.1-1_all.deb
+ 5edbea70de953b0f42f4dff888432db73b2f5247f0f6ca691a588bbc266e872a 7072 builder_0.0.1-1_all.deb
 Build-Origin: Ubuntu
 Build-Architecture: amd64
-Build-Date: Fri, 07 Jun 2019 11:57:45 +0530
+Build-Date: Wed, 19 Jun 2019 10:59:03 +0530
 Installed-Build-Depends:
  autoconf (= 2.69-11),
  automake (= 1:1.15.1-3ubuntu2),
@@ -165,15 +165,15 @@ Environment:
 
 -----BEGIN PGP SIGNATURE-----
 
-iQHFBAEBCgAvFiEE2KEIur0YsdTKfpA2LprV5jB5Z/sFAlz6A+IRHG1pbGluZDdA
-bGl2ZS5jb20ACgkQLprV5jB5Z/udJQwAkh7B5lIEkES5EO3w3gd6vKlNgnZt5A66
-sz0PEd4sUXADrQtHCUlG0DygBjYUf3KGd2zTKnWnG8q9FAwRVGO3QGjFkRuB6k0k
-qD3aKMVU3bzU+zJ+VPDwmhdl+riGCzY0Zkd3LW+FbKYd2V1qqYCXKkhrnbF2j+J/
-LN1O1VhRLaIKSzQb0NMwSkUeJlX/Tr+cNQ7d4j5H3pxbyqEnSUqkFTehkehjoH3W
-iX37IQD/frqKnR26iSJrfnoTOubq+M7dgPwfVSy9tyIomSSQIecerFtY+Rr3k6uV
-AqMrcQkjFboF1aq1h12O+pKdoaGov0KfYMOyy5QFMJ6xvAbzGG4xeue8nqjA3dHC
-H5Q637SQ4CeyORYhC3yHzQEhxUMlvKUxS8+ljQpJkhcQS84thjcPAhNA4mIdcPb2
-m6B7D3ADfT+6X2maZT7qUYMJt5+XnT/lFaIv26kUtXj/plQ5u2TKIDwUNhw8JVLE
-P7wB4SsGIRfvqKwFoMJK7oh+RLlvkO3z
-=/iPD
+iQHFBAEBCAAvFiEE2KEIur0YsdTKfpA2LprV5jB5Z/sFAl0JyB8RHG1pbGluZDdA
+bGl2ZS5jb20ACgkQLprV5jB5Z/s/iAv/Ss9Wgurdg5did1paak7qmd2501woqL8J
+5aLXOhleKfKdcOQycR9ncuNUcBWouyCs/UB889muJUqvHE8QCXqUQJ9m0oZLzjwc
+FhYlzlQ8j9FB241rN7sVUN3LJmkDYq12890ro3OME5cYEuazre7NaepRQiv6065A
+cyaHRmPffGvGfzE9X33XSWVW4rrnfCZOR0rQ/quZs+djLDVURBKfglONRrmMjEih
+MCQ1ViSA7GXVVLW7NbYki3R6kuYL7Pqg8Kn45gN4yHotBDrFVSfJ/RYjackDzj1b
+dTjKMcnXjbK4O5tjuZZJw6lrTK74yPG5BRoiw5lvYaAOT4FcrUYw9dQPfzfnHgI+
+aw5E1DN8NhNgU4ZmeYb3oxvom5d6SwBRI8AP5nlWHcCJBGR5+jIn+hWH016vOxE8
+W6Zdj6MiU3ru3CDiJMvucVkDMPfPF5YVmgMN3I5SgVfqu7YUqSu8Ev81GThsm9EE
+AhoB/2dSzaNZrcojzhWbQYngRAsHEBAC
+=Y9KS
 -----END PGP SIGNATURE-----
