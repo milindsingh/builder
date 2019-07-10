@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+# Locate folder for builder scripts
+BUILDER_HOME=../builder/
+if [ ! -d "$BUILDER_HOME" ]; then
+    BUILDER_HOME=/opt/builder/
+    if [ ! -d "$BUILDER_HOME" ]; then
+        echo
+        echo "Builder scripts are not installed or missing. Exiting..."
+        echo
+        exit 0
+    fi
+fi
+
+echo    "System setup initiated"
+echo
+
+USER=$(whoami)
+if [[ $USER = "root" ]]
+then
+    echo "Please use without root user or sudo. Exiting...."
+    exit 0
+fi
+
+
+read -p "Do you want to setup SSH|cURL|Git [Y|N]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    $BUILDER_HOME/initialize.sh
+fi
+
+read -p "Do you want to setup XAMPP [Y|N]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    $BUILDER_HOME/php/installer/xampp.sh
+fi
+
+read -p "Do you want to setup Composer [Y|N]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    $BUILDER_HOME/php/initialize.sh
+fi
+
+read -p "Do you want to setup Xdebug [Y|N]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    $BUILDER_HOME/php/xdebug-setup-xampp.sh
+fi
+
+read -p "Do you want to setup MEQP [Y|N]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    $BUILDER_HOME/php/magento/meqp-setup-xampp.sh
+fi
+
+read -p "Do you want to setup IDE [Y|N]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    $BUILDER_HOME/php/installer/ide.sh
+fi
+
+echo
+echo    "System setup complete"
+echo
+
+

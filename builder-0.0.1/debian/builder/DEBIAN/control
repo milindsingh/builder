@@ -1,0 +1,10 @@
+Package: builder
+Version: 0.0.1-1
+Architecture: all
+Maintainer: Milind Singh <milind7@live.com>
+Installed-Size: 45
+Section: unknown
+Priority: optional
+Homepage: https://github.com/milindsingh/builder
+Description: System setup scripts
+ Simple shell scripts for developer system setup via cli
