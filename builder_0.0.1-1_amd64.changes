@@ -18,26 +18,26 @@ Changes:
  .
    * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
 Checksums-Sha1:
- 2482ff9bd12a7906ede68d29cd725e816bc6b7e6 7072 builder_0.0.1-1_all.deb
- 8031e930b2e556589bbdb08666b0fc8cb060c73c 5909 builder_0.0.1-1_amd64.buildinfo
+ 62b272a96f9ea19e17cabde750e2325fa99e794e 7156 builder_0.0.1-1_all.deb
+ c03f1226f9fa9a22acb3f45627180ab5cf345250 5990 builder_0.0.1-1_amd64.buildinfo
 Checksums-Sha256:
- 5edbea70de953b0f42f4dff888432db73b2f5247f0f6ca691a588bbc266e872a 7072 builder_0.0.1-1_all.deb
- 122b380a92311428a4b586ba8b1d19fa10091a9e225b76e011668ed4066777de 5909 builder_0.0.1-1_amd64.buildinfo
+ 91e7e27be6fb0785b1ed80225ddb3de859ccd8280856c79d22a5111b4eea5a59 7156 builder_0.0.1-1_all.deb
+ 47083064a85a6361b585924027eb9225839008841bd42d057e84f97df177e4ef 5990 builder_0.0.1-1_amd64.buildinfo
 Files:
- 4daa17fc335eb8a31e1fc2456f5436b9 7072 unknown optional builder_0.0.1-1_all.deb
- b776fbf3c674e7aedb11ae27a7f23102 5909 unknown optional builder_0.0.1-1_amd64.buildinfo
+ 41f2d7fd6b31803c25a4e46241128503 7156 unknown optional builder_0.0.1-1_all.deb
+ 8a8d4bcd54ab4e0bbacb271a1f1bfaf9 5990 unknown optional builder_0.0.1-1_amd64.buildinfo
 
 -----BEGIN PGP SIGNATURE-----
 
-iQHEBAEBCAAvFiEE2KEIur0YsdTKfpA2LprV5jB5Z/sFAl0JyCARHG1pbGluZDdA
-bGl2ZS5jb20ACgkQLprV5jB5Z/vrpAv2OqlfyL4inGFcj8WeDWSMGu8WelftyBkq
-2r6bTehfSxBG5U2VO15IrPZ3ymRil6KTZqzn24rkM/mluwSBYGtZqfJJZfhamlPi
-GFc4sImpo6fMxcKFsa7HmpkNuuXaiJEXNZJwoWG/g7DF9vXjkCg79zrL7/4+94BA
-2QUJ8XVltMAebPx7UG8kvU6joywIyI6oQvPH9/99WAarP2AnTZ8lipUE4JTh9B31
-mLXfnogVuvLpoPzZWWgpm/E3gekR1VTbl4GfMWPUJC0qaGlHoezH4K6ZKqzvJgAr
-JR9CP4YpPyIWIWngS8kXckXenZuifw1j2156dAy9nkRVCJ2P0x2GMG418iUyNcoI
-isW7oC7O2/Dj143yqG+M+oIczrPrsv05XWbgLGHbqDJAP/1dl2pMRv8z+Iebgv21
-aFQ+XrFLRUPMCcz9PJXZn9XHf9CLalaMlb3fkrlmCt/bZ8lGGjkTQYS2mnQOeSRF
-2LMiYedxAkyvSNgaX2WuzXw086BH5bg=
-=n9Es
+iQHFBAEBCAAvFiEE2KEIur0YsdTKfpA2LprV5jB5Z/sFAl0lnHERHG1pbGluZDdA
+bGl2ZS5jb20ACgkQLprV5jB5Z/vIwAv/YTZu2FeK4TGgSQ8/9PmCKWPn6NmbpW+Z
+rnONnRTErICok+ueijGUhmdNofvkJsGCDPHXtDgISb8CCeTcetr5NnOqvVRKwFUk
+37gswQ/ToxDPXfE4HJ1wSIOZyI6HbcRSel/EsxHJQXfWsh7MmRN1YnRQJGkwumep
+SIUPUNc6a0I0ujVLluMU4ribsDxOD8+hrFZ9fxuek0PFtm8tBNVwtviu4r2rtEnw
+GCUl920wQbiFO3qeoGt5u/cyomh4movTLTE+bNqdf+hQPRdQl8tCoWuJiSo/Bz81
+M1i2Eg9oaeXGzwnu3efMiGvRAX1iWrkDhWMsfMlsbaSfurdDHg8ZcUsQO9kNaPJq
+cffdjNttSRctosndDCee404uE+Ugup6lf9v1CpjRiGsAE0qyx65DSQ+njZZkhYu2
+uMQKUGt/zuiL826Dw7X0X3uAf7rXSK7CRSgDunUAJ0JJWDRDvFYnMP95HOnid7Uf
+WGClWq/rrg+1N/vkH7ph7UQIUDIG35J2
+=zNbx
 -----END PGP SIGNATURE-----

@@ -2,6 +2,9 @@
 
 # Locate folder for builder scripts
 BUILDER_HOME=../builder/
+# Path to save downloaded files
+BUILDER_TMP=/tmp/builder/
+
 if [ ! -d "$BUILDER_HOME" ]; then
     BUILDER_HOME=/opt/builder/
     if [ ! -d "$BUILDER_HOME" ]; then

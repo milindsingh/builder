@@ -5,13 +5,13 @@ e3cfb7adaca4c3a35da56337a8e55c4a  opt/builder/js/react/initialize.sh
 a640e80cc309c63c7cf18df85061ecb3  opt/builder/php/initialize.sh
 3fb9486cf574a1ec250c371f8cd55df2  opt/builder/php/install-phalcon.sh
 5307a96bf83b8129b5309850fa7d59dd  opt/builder/php/installer/ide.sh
-cb1032f4a18087ffedf9d7f8ca215a79  opt/builder/php/installer/xampp.sh
+970e17d8dc6ba2258e97880612172511  opt/builder/php/installer/xampp.sh
 7f81947980f02f13fb480de43a62f4c9  opt/builder/php/magento/magento-support.sh
 7d075ef08e5937909356317eb2558811  opt/builder/php/magento/meqp-setup-xampp.sh
 0846acb570284d6d82b855ee42057bc7  opt/builder/php/magento/meqp-setup.sh
 193c2984e113dedf894ff963747d9bec  opt/builder/php/xdebug-setup-xampp.sh
 e3cfb7adaca4c3a35da56337a8e55c4a  opt/builder/python/initialize.sh
-ccee893270153bfa4b87464e6b299da4  usr/bin/builder
+970c78fcaeb6e6e31c0abe6b2a401b76  usr/bin/builder
 95a03b542ce259a5a515178974f7699c  usr/share/doc/builder/README.Debian
 3ebcac989e8f41eaf4320da3d268e134  usr/share/doc/builder/changelog.Debian.gz
 6b0331377b4feebf3f557900ea9a7c8a  usr/share/doc/builder/copyright
