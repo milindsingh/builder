@@ -4,6 +4,7 @@ USER=$(whoami)
 EXE_PATH=$PWD
 HOME_USER_PATH="/home/$USER"
 XAMPP_BIN="/opt/lampp/bin"
+BUILDER_TMP="/tmp/builder/"
 
 XAMPP_NAME7_2=xampp-linux-x64-7.2.20-0-installer.run
 XAMPP_URL7_2=https://www.apachefriends.org/xampp-files/7.2.20/xampp-linux-x64-7.2.20-0-installer.run
@@ -99,9 +100,9 @@ fi
 echo
 echo \"Which XAMPP would you like to activate?\"
 echo
-echo \"Enter '7_2' for XAMPP with PHP 7.2\"
+echo \"Enter '7.2' for XAMPP with PHP 7.2\"
 echo
-echo \"Enter '7_3' for XAMPP with PHP 7.3\"
+echo \"Enter '7.3' for XAMPP with PHP 7.3\"
 echo
 echo \"Enter '5' for XAMPP with PHP 5\"
 echo

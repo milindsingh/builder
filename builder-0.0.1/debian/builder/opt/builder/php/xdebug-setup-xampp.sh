@@ -1,4 +1,5 @@
 GIT='0'
+BUILDER_TMP="/tmp/builder/"
 
 read -p "Install Xdebug from Git Source [Y|N]? " -n 1 -r
 echo    # (optional) move to a new line
@@ -27,15 +28,16 @@ then
     echo "Installing via Git........."
     EXTENSIONS_PATH='/opt/lampp/lib/php/extensions'
 
-    if [ ! -d "./xdebug" ]; 
+    if [ ! -d "./xdebug" ];
     then
 	sudo apt-get install -y git
-	git clone https://github.com/xdebug/xdebug.git
+	git clone https://github.com/xdebug/xdebug.git ${BUILDER_TMP}xdebug
     fi
 
-    cd xdebug
-    sudo /opt/lampp/bin/phpize
-    sudo ./configure --enable-xdebug --with-php-config=/opt/lampp/bin/php-config
+    sudo chmod 777 -R ${BUILDER_TMP}xdebug
+    cd ${BUILDER_TMP}xdebug
+    /opt/lampp/bin/phpize
+    ./configure --enable-xdebug --with-php-config=/opt/lampp/bin/php-config
     make
     sudo cp modules/xdebug.so /opt/lampp/lib/php/extensions
 else
@@ -66,7 +68,7 @@ xdebug.max_nesting_level=300
 xdebug.ide_key=’PHPSTORM’
 
 xdebug.remote_connect_back=1
-"  >> "/opt/lampp/etc/php.ini"
+" | sudo tee -a "/opt/lampp/etc/php.ini"
 
 	echo "Restarting xampp........."
 	sudo /opt/lampp/xampp restart
@@ -80,3 +82,6 @@ echo ""
 echo "Restarting xampp........."
 sudo /opt/lampp/xampp restart
 
+echo "PHP Version:"
+echo
+php -v
