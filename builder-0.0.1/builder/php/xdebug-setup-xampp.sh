@@ -31,7 +31,7 @@ then
     if [ ! -d "./xdebug" ];
     then
 	sudo apt-get install -y git
-	git clone https://github.com/xdebug/xdebug.git ${BUILDER_TMP}xdebug
+	git clone --single-branch -b xdebug_2_8 https://github.com/xdebug/xdebug.git ${BUILDER_TMP}xdebug
     fi
 
     sudo chmod 777 -R ${BUILDER_TMP}xdebug
